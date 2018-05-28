@@ -24,6 +24,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifb-oV-sWk">
+                                <rect key="frame" x="166.5" y="97" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-vV-thZ">
                                 <rect key="frame" x="140" y="118" width="95" height="30"/>
                                 <state key="normal" title="Next question"/>
@@ -49,6 +55,8 @@
                         <constraints>
                             <constraint firstItem="NN3-jh-Pne" firstAttribute="top" secondItem="lyP-dq-nuA" secondAttribute="bottom" id="9p7-hx-fh5"/>
                             <constraint firstItem="NN3-jh-Pne" firstAttribute="centerX" secondItem="ZCD-vV-thZ" secondAttribute="centerX" id="FUZ-yx-47g"/>
+                            <constraint firstItem="ifb-oV-sWk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LKy-FT-98k"/>
+                            <constraint firstItem="ifb-oV-sWk" firstAttribute="top" secondItem="VMp-rY-uNa" secondAttribute="top" id="PN9-WL-8cK"/>
                             <constraint firstItem="ZCD-vV-thZ" firstAttribute="top" secondItem="VMp-rY-uNa" secondAttribute="bottom" id="SYW-nR-xPB"/>
                             <constraint firstItem="VMp-rY-uNa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TXu-FC-X2X"/>
                             <constraint firstItem="VMp-rY-uNa" firstAttribute="centerX" secondItem="ZCD-vV-thZ" secondAttribute="centerX" id="URf-az-JhG"/>
@@ -60,7 +68,8 @@
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="lyP-dq-nuA" id="jjS-Ao-Lxc"/>
-                        <outlet property="questionLabel" destination="VMp-rY-uNa" id="cr2-5U-qwg"/>
+                        <outlet property="currentQuestionLabel" destination="VMp-rY-uNa" id="yqA-k9-p8w"/>
+                        <outlet property="nextQuestionLabel" destination="ifb-oV-sWk" id="JZ9-9u-cYo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
