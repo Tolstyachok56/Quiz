@@ -54,14 +54,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NN3-jh-Pne" firstAttribute="top" secondItem="lyP-dq-nuA" secondAttribute="bottom" id="9p7-hx-fh5"/>
-                            <constraint firstItem="NN3-jh-Pne" firstAttribute="centerX" secondItem="ZCD-vV-thZ" secondAttribute="centerX" id="FUZ-yx-47g"/>
+                            <constraint firstItem="NN3-jh-Pne" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FUZ-yx-47g"/>
+                            <constraint firstItem="ZCD-vV-thZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IHq-6m-gMg"/>
                             <constraint firstItem="ifb-oV-sWk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LKy-FT-98k"/>
                             <constraint firstItem="ifb-oV-sWk" firstAttribute="top" secondItem="VMp-rY-uNa" secondAttribute="top" id="PN9-WL-8cK"/>
                             <constraint firstItem="ZCD-vV-thZ" firstAttribute="top" secondItem="VMp-rY-uNa" secondAttribute="bottom" id="SYW-nR-xPB"/>
                             <constraint firstItem="VMp-rY-uNa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TXu-FC-X2X"/>
-                            <constraint firstItem="VMp-rY-uNa" firstAttribute="centerX" secondItem="ZCD-vV-thZ" secondAttribute="centerX" id="URf-az-JhG"/>
                             <constraint firstItem="VMp-rY-uNa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="77" id="arP-38-TkF"/>
-                            <constraint firstItem="lyP-dq-nuA" firstAttribute="centerX" secondItem="ZCD-vV-thZ" secondAttribute="centerX" id="f5O-jr-b7d"/>
+                            <constraint firstItem="lyP-dq-nuA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f5O-jr-b7d"/>
                             <constraint firstItem="lyP-dq-nuA" firstAttribute="top" secondItem="ZCD-vV-thZ" secondAttribute="bottom" constant="121" id="fkU-mV-hjT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -69,7 +69,9 @@
                     <connections>
                         <outlet property="answerLabel" destination="lyP-dq-nuA" id="jjS-Ao-Lxc"/>
                         <outlet property="currentQuestionLabel" destination="VMp-rY-uNa" id="yqA-k9-p8w"/>
+                        <outlet property="currentQuestionLabelCenterXConstraint" destination="TXu-FC-X2X" id="BU3-Jk-H84"/>
                         <outlet property="nextQuestionLabel" destination="ifb-oV-sWk" id="JZ9-9u-cYo"/>
+                        <outlet property="nextQuestionLabelCenterXConstraint" destination="LKy-FT-98k" id="t83-7b-Kjf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
