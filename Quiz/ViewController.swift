@@ -65,6 +65,7 @@ class ViewController: UIViewController {
     //MARK: - Animation
 
     func animateLabelTransitions() {
+        view.layoutIfNeeded()
         let screenWidth = view.frame.width
         self.nextQuestionLabelCenterXConstraint.constant = 0
         self.currentQuestionLabelCenterXConstraint.constant += screenWidth
