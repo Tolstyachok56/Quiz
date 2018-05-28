@@ -35,7 +35,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         currentQuestionLabel.text = questions[currentQuestionIndex]
-        updateOffScreenLabel()
+//        updateOffScreenLabel()
+        
+        nextQuestionLabelCenterXConstraint.isActive = false
+        let layoutGuide = UILayoutGuide()
+        view.addLayoutGuide(layoutGuide)
+        layoutGuide.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        nextQuestionLabel.centerXAnchor.constraint(equalTo: layoutGuide.leadingAnchor).isActive = true
+        currentQuestionLabel.centerXAnchor.constraint(equalTo: layoutGuide.trailingAnchor).isActive
+            = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,9 +74,8 @@ class ViewController: UIViewController {
 
     func animateLabelTransitions() {
         view.layoutIfNeeded()
-        let screenWidth = view.frame.width
-        self.nextQuestionLabelCenterXConstraint.constant = 0
-        self.currentQuestionLabelCenterXConstraint.constant += screenWidth
+//        self.nextQuestionLabelCenterXConstraint.constant = 0
+        self.currentQuestionLabelCenterXConstraint.constant += view.frame.width
         
         UIView.animate(withDuration: 0.5,
                        delay: 0,
@@ -81,17 +88,21 @@ class ViewController: UIViewController {
                         self.view.layoutIfNeeded()
         },
                        completion: {(_) in
-                        swap(&self.currentQuestionLabel, &self.nextQuestionLabel)
-                        swap(&self.currentQuestionLabelCenterXConstraint, &self.nextQuestionLabelCenterXConstraint)
-                        self.updateOffScreenLabel()
+//                        swap(&self.currentQuestionLabel, &self.nextQuestionLabel)
+//                        swap(&self.currentQuestionLabelCenterXConstraint, &self.nextQuestionLabelCenterXConstraint)
+//                        self.updateOffScreenLabel()
+                        swap(&self.currentQuestionLabel.text, &self.nextQuestionLabel.text)
+                        self.currentQuestionLabel.alpha = 1
+                        self.currentQuestionLabelCenterXConstraint.constant = 0
+                        self.view.layoutIfNeeded()
+                        self.nextQuestionLabel.alpha = 0
         })
     }
     
     //MARK: - Update UI
     
     func updateOffScreenLabel() {
-        let screenWidth = view.frame.width
-        nextQuestionLabelCenterXConstraint.constant = -screenWidth
+        nextQuestionLabelCenterXConstraint.constant = -view.frame.width
     }
 }
 
