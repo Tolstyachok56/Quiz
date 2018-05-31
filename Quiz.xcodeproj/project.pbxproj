@@ -99,8 +99,8 @@
 			children = (
 				04BBF0B320B4333800BFD768 /* AppDelegate.swift */,
 				04BBF0B520B4333800BFD768 /* ViewController.swift */,
-				04BBF0B720B4333800BFD768 /* Main.storyboard */,
 				04BBF0BA20B4333900BFD768 /* Assets.xcassets */,
+				04BBF0B720B4333800BFD768 /* Main.storyboard */,
 				04BBF0BC20B4333900BFD768 /* LaunchScreen.storyboard */,
 				04BBF0BF20B4333900BFD768 /* Info.plist */,
 			);
